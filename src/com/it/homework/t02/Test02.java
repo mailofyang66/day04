@@ -11,4 +11,31 @@ public class Test02 {
 		要求1.创建子类继承抽象类的方式实现
 		要求2:用匿名内部类实现
  */
+	
+	public static void main(String[] args) {
+		IPlay p1=new IPlayDerive();
+		p1.playGame();
+		//匿名内部类实现
+		new IPlay(){
+
+			@Override
+			public void playGame() {
+				System.out.println("匿名内部类实现");
+			}
+		}.playGame();;
+		System.out.println("--------------------------");
+		//fun
+		Fun f=new FunChild();
+		f.fun();
+		
+		//匿名内部类实现
+		new Fun(){
+
+			@Override
+			public void fun() {
+				System.out.println("匿名内部类实现fun");
+			}
+			
+		}.fun();;
+	}
 }
